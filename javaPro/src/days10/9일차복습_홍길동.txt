@@ -1,0 +1,39 @@
+1.  주민등록번호를 검증( check ) 하는 함수를 선언하세요.
+    1) 기능         :  isRRNCheck
+    2) 매개변수 :  String rrn
+    3) 리턴값 및 리턴자료형 : boolean
+        올바른 주민등록번호일 때 true 반환
+        잘못된 주민등록번호일 때 false 반환 
+	public static boolean isRRNCheck(String rrn) {
+		int [] v = {2,3,4,5,6,7,0,8,9,2,3,4,5};
+		int total = 0;
+		for (int i = 0; i <= 12; i++) {			
+			total += (rrn.charAt(i)-'0')*v[i];
+		} // for
+		int ㅍ = rrn.charAt(13)-'0';
+	    return ㅍ == 	(11-total%11)%10;		
+	}
+	 
+	 10:02 수업시작~       
+2. 10진수 정수를 입력받아서 8진수로 출력
+2-2. 10진수 정수를 입력받아서 16진수로 출력
+
+3. 주민등록번호를 입력받아서 만나이 계산해서 반환하는 함수 선언
+   ( 
+      함수 프로토타입(Prototype)  == 함수 원형
+      int getAmericanAge( String rrn ) 
+   )          
+        
+4. 달력을 그리기 위한 아래 함수(메서드)들를 선언하세요 .
+  1) private static int getDayOfWeek(int year, int month, int day)
+  2) private static int getTotalDays(int year, int month, int day) 
+  3) private static int getLastDay(int year, int month)         
+    
+
+        
+        
+        
+        
+        
+        
+       

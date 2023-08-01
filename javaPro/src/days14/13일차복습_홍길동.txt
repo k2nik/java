@@ -1,0 +1,167 @@
+1. 용어 정리
+  1) 객체 지향적 프로그래밍( OOP ) 
+     객체단위 프로그래밍 기법
+     생산성 향상
+     유지보수 용이
+     자바 언어 = 객체 지향적 프로그래밍 언어
+     
+  2) 객체 - 클래소 실제 존재하는 것. 유형/무형        
+  3) 클래스 - 객체 설계도      
+  4) 인스턴스 - 생성된 객체      
+  5) 인스턴스화 - 클래스 -> 객체 생성되는 과정
+      코딩) new 클래스명();
+            new Tv();
+            new Student();
+            
+      Heap 동적 메모리 영역 할당.
+      
+      [번호][이름][국어]....[등수] 
+      0x100     
+      
+  6) 객체의 구성요소 => 멤버(member) = 속성(특징) + 기능(일) 
+  7) 멤버 
+  8) 멤버변수 : 속성 변수 , 필드
+  9) 멤버함수 : 기능 함수 , 메서드 
+  10) 필드
+  11) 메서드 
+  12) 변수    : 값 저장하는 저장공간의 이름       
+  13) 참조변수: 값(주소값) 저장하는 저장공간의 이름
+      참조타입 - 배열 , 클래스 , 인터페이스 
+      
+      int []   m  = new int[3];
+             변수, 참조변수, 배열명
+      Tv tv1 = new Tv();
+         변수, 참조변수, 객체명    
+  
+2. 클래스의 특징( OOP의 특징 )에 대해서 설명하세요.
+    캡, 은, 상, ***다***, 추
+   
+3. 클래스의 설계 과정에 대해서 설명하세요.  
+   집-> 설계도면 -> ...
+   1) 요구분석 -> 객체의 구성요소( 멤버 ) 파악 -> 필드, 메서드 목록 작성.
+   2) 클래스 선언 
+   :
+
+4. 클래스의 [멤버(필드, 메서드, 생성자 )]를 접근하는 방법에 대해서 설명하세요.
+   
+   class Tv{
+       // 필드
+      boolean power;
+      int channel;
+      
+      // 메서드
+      void channelUp(){}
+   }
+   
+   Tv tv1 = new Tv();  // 객체 선언 및 생성
+   tv1.power();        // 객체명.필드
+   tv1.channel         // 객체명.메서드()
+ 
+5. NullPointerException 예외(에러)는 언제 발생하는 가 ?
+   // 참조타입에 발생하는 예외(에러==오류)
+   // 배열
+   int [] m = null;
+   m[0]=100;
+   
+   // 클래스
+   Tv tv1 = null;
+   tv1.power();
+
+
+6. 클래스의 선언 형식
+   접  기  class 클래스명 extends 수퍼클래스 implements 인터페이스... {}
+     한
+     수
+  
+7. 클래스 앞의 접근지정자의 종류에 대해서 설명하세요.
+   public
+   protected  비활성
+   default
+   private    비활성
+
+8. 멤버 앞의 접근지정자의 종류에 대해서 설명하세요.
+   public
+   protected   
+   default
+   private   
+   
+   Time   
+
+9. 클래스 선언할 때 기타제어자 종류에 대해서 설명하세요.
+   final
+   abstract 
+   static 비활성       정적(static)클래스
+
+10. 클래스(객체) 복사(copy)와 복제(clone)에 대해서 설명하세요.
+
+    Tv tv1 = new Tv();
+    [][][][][]                 [0x100]
+    0x100                       tv1
+    
+                               [0x100]
+                                tv2
+    
+    Tv tv2 =  tv1;  // 클래스 복사
+    
+    
+    test(tv1);
+    
+    tv1.channel ;  // 출력 10
+    
+    
+    //   참조형 리턴자료형           참조형 매개변수
+    public Tv test(Tv t){  // 클래스 복사
+    
+      t.channel = 10;
+    }
+    
+ 
+    Tv tv3 =  new Tv();
+    // 필드의 값 똑같이 설정
+    t3.ch =t1.ch
+    :
+    :  
+
+11. 클래스 배열( 객체 배열 ) 에 대해서 설명하세요.
+
+    Student s1 = new Student();
+    Student s1 = new Student();
+    Student s1 = new Student();
+    Student s1 = new Student();
+    Student s1 = new Student();
+    Student s1 = new Student();
+    Student s1 = new Student();
+    :
+    Student s300 = new Student();
+    
+    
+    
+    Student [] students = new Student[300];
+    // 주의    배열명
+    
+    [0x200][][]         -> []students
+    students[0]
+    객체
+    
+    
+    [][][][][][][][][]
+    0x200
+    students[0] = new Student(); // 
+
+10:02 수업 시작~ 
+12. 선언되는 위치를 기준으로 변수 구분하고, 생성시기, 소멸시기에 대해서 설명하세요. 
+    1) 지역변수 - 메서드 안   
+    2) 인스턴스 변수 - 클래스의 필드
+    Student s1 = new Student();
+    s1.name = "홍길동";
+    
+    Student s2 = new Student();
+    s2.name = "김기수";
+    
+    3) 클래스 변수   - 클래스의 필드  X
+
+
+
+
+
+
